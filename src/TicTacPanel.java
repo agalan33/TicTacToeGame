@@ -11,6 +11,8 @@ public class TicTacPanel extends JPanel {
 
 	public void paintComponent(Graphics t){
 		
+		
+		
 		super.paintComponent(t);
         Insets myInsets = this.getInsets();
         int x1 = myInsets.left;
@@ -28,6 +30,8 @@ public class TicTacPanel extends JPanel {
         t.drawLine(2*width/3, 0, 2*x2/3, y2);
         t.drawLine(0, height/3, x2, y2/3);
         t.drawLine(0, 2*height/3, x2, 2*y2/3);
+        
+        
         
         
         

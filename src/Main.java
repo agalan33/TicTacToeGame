@@ -2,6 +2,8 @@ import java.awt.Dimension;
 import java.awt.GraphicsDevice;
 import java.awt.Toolkit;
 import java.awt.Window;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
@@ -27,6 +29,17 @@ public class Main {
 				ticTacFrame.setLocation(centerX -200, centerY -150);
 				ticTacFrame.setSize(400, 400);
 				ticTacFrame.setResizable(false);
+				ticPanel.addMouseListener(new MouseAdapter() {
+					
+					@Override 
+					public void mousePressed(MouseEvent e) {
+						int x = e.getX();
+						int y = e.getY();
+						
+					}
+					
+					
+				});
 				
 				
 				
