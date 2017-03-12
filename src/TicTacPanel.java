@@ -1,9 +1,8 @@
 import java.awt.Color;
-import java.awt.Frame;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.Insets;
 
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class TicTacPanel extends JPanel {
@@ -15,12 +14,64 @@ public class TicTacPanel extends JPanel {
 	private boolean firstMove = false;
 
         
-        public void gameMove(int x1, int y1){
+        public void gameMove(int x1, int y1, boolean shapeX0){
         
+        	if(y1<200){
+        		System.out.println("ho");
+        		if(x1<200){
+        			firstMove = true;
+            		shape.setShapeInfo(20, 20, (600/3)-20 , (600/3)-20, shapeX0);
+            		repaint();
+        		}
+        		else if(x1>2*(600/3)){
+        			firstMove = true;
+            		shape.setShapeInfo(2*(600/3)+20, 20, 600-20 , (600/3)-20, shapeX0);
+            		repaint();
+        		}
+        		else{
+        			firstMove = true;
+            		shape.setShapeInfo((600/3) + 20, 20, 2*(600/3)-20 , (600/3)-20, shapeX0);
+            		repaint();
+        		}
+        		
+        	}
+        	else if(y1>400){
+        		if(x1<200){
+        			firstMove = true;
+            		shape.setShapeInfo(20, 420, (600/3)-20 , 600-20, shapeX0);
+            		repaint();
+        		}
+        		else if(x1>2*(600/3)){
+        			firstMove = true;
+            		shape.setShapeInfo(2*(600/3)+20, 420, 600-20 , 600-20, shapeX0);
+            		repaint();
+        		}
+        		else{
+        			firstMove = true;
+            		shape.setShapeInfo((600/3) + 20, 420, 2*(600/3)-20 , 600-20, shapeX0);
+            		repaint();
+        		}
+        		
+        	}
+        	else{
+        		if(x1<200){
+        			firstMove = true;
+            		shape.setShapeInfo(20, 220, (600/3)-20 , 400-20, shapeX0);
+            		repaint();
+        		}
+        		else if(x1>2*(600/3)){
+        			firstMove = true;
+            		shape.setShapeInfo(2*(600/3)+20, 220, 600-20 , 400-20, shapeX0);
+            		repaint();
+        		}
+        		else{
+        			firstMove = true;
+            		shape.setShapeInfo((600/3) + 20, 220, 2*(600/3)-20 , 400-20, shapeX0);
+            		repaint();
+        		}
+        	}
         	
-        	   firstMove = true;
-        		shape.setShapeInfo(10, 10, 100 , 100, false);
-        		repaint();
+        	   
         		
         		
         	
@@ -44,8 +95,8 @@ public class TicTacPanel extends JPanel {
             t.setColor(Color.GREEN);
             t.drawLine(width/3, 0, x2/3, y2);
             t.drawLine(2*width/3, 0, 2*x2/3, y2);
-            t.drawLine(0, height/3, x2, y2/3);
-            t.drawLine(0, 2*height/3, x2, 2*y2/3);
+            t.drawLine(0, 200, x2, 200);
+            t.drawLine(0, 400, x2, 400);
             
             
             

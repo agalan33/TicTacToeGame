@@ -26,22 +26,19 @@ public class Main {
 			    int centerX = (int) ((dimension.getWidth() - ticTacFrame.getWidth()) / 2);
 			    int centerY = (int) ((dimension.getHeight() - ticTacFrame.getHeight()) / 2);
 				
-				ticTacFrame.setLocation(centerX -200, centerY -150);
-				ticTacFrame.setSize(400, 400);
+				ticTacFrame.setLocation(centerX -300, centerY -300);
+				ticTacFrame.setSize(600, 600);
 				ticTacFrame.setResizable(false);
 				ticPanel.addMouseListener(new MouseAdapter() {
 					
 					@Override 
 					public void mousePressed(MouseEvent e) {
-						int x = e.getX();
-						int y = e.getY();
-						System.out.println(x +" " +y);
-						
-						ticPanel.gameMove(x, y);
-						
+							int x = e.getX();
+							int y = e.getY();
+							boolean shape = false;
+							System.out.println(x +" " +y);
+							ticPanel.gameMove(x, y,shape);
 					}
-					
-					
 				});
 				
 				

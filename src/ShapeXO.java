@@ -18,7 +18,7 @@ public class ShapeXO {
 		}
 		else{
 			x.setColor(Color.GREEN);
-			x.drawOval((this.xPos+this.xPos2)/2,(this.yPos+this.yPos2)/2 , 100, 100);
+			x.drawOval(this.xPos,this.yPos , 150, 150);
 		}
 	}
 	public void setShapeInfo(int x1,int y1, int x2,int y2, boolean selShape){
