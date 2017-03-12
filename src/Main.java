@@ -35,6 +35,9 @@ public class Main {
 					public void mousePressed(MouseEvent e) {
 						int x = e.getX();
 						int y = e.getY();
+						System.out.println(x +" " +y);
+						
+						ticPanel.gameMove(x, y);
 						
 					}
 					
